@@ -9,6 +9,8 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
     override the handle() method to implement communication to the
     client.
     """
+    responce = '\x06\x0F\x0F\x0F\x0F\x0C\x78\x0F'
+    
     def processPKT(self, data_to_process):
         local_data = bytearray(data_to_process)
         print "Throttle:",
@@ -37,8 +39,9 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
             self.data = self.data.strip()
             #print str(self.client_address[0]) + " wrote: "
             #print self.data
-            self.request.send(self.data.upper())
+            #self.request.send(self.data.upper())
             if self.isValidPKT( ):
+                self.request.send( self.responce )
                 self.processPKT( self.data )
     
 
