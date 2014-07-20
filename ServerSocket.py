@@ -1,6 +1,10 @@
 import sys
 import SocketServer
 import Queue
+import random
+import socket
+import binascii
+import struct
 
 class MyTCPHandler(SocketServer.BaseRequestHandler):
     """
@@ -11,18 +15,21 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
     client.
     """
     responce = '\x06\x0F\x0F\x0F\x0F\x0C\x78\x0F'
+    rQue = Queue.Queue()
     que = Queue.Queue()
     processQue = Queue.Queue()
     
     def processPKT(self):
-        print "Throttle:",
-        print str(self.processQue.get())
-        print "Left/Right:",
-        print str(self.processQue.get())
-        print "Something else:",
-        print str(self.processQue.get())
-        print "Last Something else",
-        print str(self.processQue.get())
+        go = 0
+        # print "valid"
+        # print "Throttle:",
+        # print str(self.processQue.get())
+        # print "Left/Right:",
+        # print str(self.processQue.get())
+        # print "Something else:",
+        # print str(self.processQue.get())
+        # print "Last Something else",
+        # print str(self.processQue.get())
 
     def isValidPKT(self):
         #Check the checksum
@@ -43,12 +50,55 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
                     self.processPKT()
                     return True
                 else:
-                    self.processQue.clear()
+                    self.processQue.queue.clear()
                     return False
             else:                
                 return False
         else:
             return False
+            
+    def randrequest( self ):
+        sensor1 = 0
+        sensor2 = 0
+        sensor3 = 0
+        sensor4 = 0
+        volt    = 0
+        amp     = 0
+        footer  = 0
+        #print "1"
+        
+        sensor1 = random.randint(0,80)
+        sensor2 = random.randint(0,80)
+        sensor3 = random.randint(0,20)
+        sensor4 = random.randint(0,50)
+        volt    = random.randint(0,12)
+        amp     = random.randint(0,255)
+        # sensor1 = 10
+        # sensor2 = 10
+        # sensor3 = 10
+        # sensor4 = 10
+        # volt    = 10
+        # amp     = 10
+        
+        #print "2"
+        
+        footer = ( ( ( ( sensor1 + sensor2 + sensor3 + sensor4 + volt + amp ) << 4 ) & 0xF0 ) | 0x0F )
+        
+        #print str(footer)
+        #self.responce = '\x06' + sensor1 + '' + sensor2 + '' + sensor3 + '' + sensor4 + '' + volt + '' + amp + '' + footer
+        self.packed_data = struct.pack('BBBBBBBB', 6, sensor1, sensor2, sensor3, sensor4, volt, amp, footer)
+        
+        # self.rQue.put('\x06')
+        # self.rQue.put( b'sensor1' )
+        # self.rQue.put( b'sensor2' )
+        # self.rQue.put( b'sensor3' )
+        # self.rQue.put( b'sensor4' )
+        # self.rQue.put( b'volt' )
+        # self.rQue.put( b'amp' )
+        # self.rQue.put( b'footer' )
+        
+        #print str(footer)
+            
 
     def handle(self):
         while 1:
@@ -63,8 +113,11 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
             #print self.data
             #self.request.send(self.data.upper())
             if self.isValidPKT( ):
-                self.request.send( self.responce )
-    
+                self.randrequest( )
+                print >>sys.stderr, 'sending "%s"' % binascii.hexlify(self.packed_data)
+                self.request.sendall(self.packed_data)
+                self.rQue.queue.clear()
+                #self.request.send( self.responce )
 
 if __name__ == "__main__":
     HOST, PORT = "localhost", 9999

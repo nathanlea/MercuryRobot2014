@@ -6,6 +6,8 @@ import Queue
 import time
 import struct
 import select
+import binascii
+
 from pygame.locals import *
 
 HOST, PORT = "localhost", 9999
@@ -21,8 +23,8 @@ DEADBAND = 0.18
 TRIGGER_DEADBAND = 0.15
 MAX_VAL = 16 
 
-print "Driving Application for Bot-Glorious in Python / Dragon"
-print "Version 1.2"
+print "Driving Application"
+print "Version 0.5"
 print "License: the author hereby waives ALL claim of copyright in this work"
 print ""
 
@@ -152,7 +154,37 @@ def isValidChecksum( recieved ):
         #print x
         if((x!=0) and (x!=7)):
             checksum = byteArr[ x ] +  checksum
+    print str(checksum)
     return( ( checksum & 0x0F ) == ( ( byteArr[7] & 0xF0 ) >> 4 ) ) 
+    
+def isValidPKT( recieved ):
+    #Check the checksum
+    checksum = 0
+    Rchecksum = 0
+    byteArr = bytearray( recieved )
+    #print str(byteArr[0])
+    if( len(byteArr) > 7 ):
+        temp = byteArr[0]
+        #print temp
+        if (((temp >> 4) ^ 0xFF) == 0xFF):
+            print temp
+            for x in range(1,8):
+                #print byteArr[x],
+                #print " ",
+                if( x!=7 ):
+                    checksum += byteArr[x]
+            #print (checksum)
+            if ( ( checksum & 0x0F ) == ( ( byteArr[7] & 0xF0 ) >> 4 ) ):
+                #print "true"
+                return True
+            else:
+                #print "Checksum Failed"
+                #print str( ( ( byteArr[7] - 48) & 0xF0 ) >> 4 )
+                return False
+        else:                
+            return False
+    else:
+        return False
 
 def poll_thread():
     global poll_timeout   
@@ -171,19 +203,22 @@ def poll_thread():
     while connect == 1:
         #print "connect"
         if poll == 1:
-            #print "poll"
+            print ""
             poll_time = current_milli_time()
             ready = select.select([s], [], [], 1)
             if ready[0]:
                 #print "data"
-                data = s.recv( 8 );                
-                if len(data) == 8 and isValidChecksum( data ):
-                    sense_aux0   = ord(data[1])
-                    sense_aux1   = ord(data[2])
-                    sense_fwd    = ord(data[3])
-                    sense_left   = ord(data[4])
-                    sense_right  = ord(data[5])
-                    sense_batt   = ord(data[6])
+                unpacker = struct.Struct('1s 1s 1s 1s 1s 1s 1s 1s')
+                data = s.recv( unpacker.size )
+                unpacked_data = unpacker.unpack(data)
+                print >>sys.stderr, 'received "%s"' % binascii.hexlify(data)
+                if len(data) == 8 and isValidPKT( unpacked_data ):
+                    sense_aux0   = ord(data[1]) - 48 
+                    sense_aux1   = ord(data[2]) - 48
+                    sense_fwd    = ord(data[3]) - 48
+                    sense_left   = ord(data[4]) - 48
+                    sense_right  = ord(data[5]) - 48
+                    sense_batt   = ord(data[6]) - 48
                     poll_timeout = False;
                 else:
                     poll_timeout = True
@@ -217,6 +252,7 @@ def client_thread():
         connected = 1
 
         while connect == 1:
+            #print "connected"
             try:
                 if cq.qsize() > 0:
                     #print ("Sending " + str(cq.qsize()) + "bytes...")
@@ -648,6 +684,7 @@ motion = 0
 while running == True:
     set_act = False
     event = pygame.event.wait()
+    cq.put('\x00')
     if event.type == QUIT:
         pygame.quit()
         connect = 0
@@ -823,7 +860,7 @@ while running == True:
                 connect = 1
                 first_connect = 1
                 brake = 1
-                #cq.put('5')
+                cq.put('0')
                 #cq.put('3')
                 #cq.put('7')
                 #cq.put(']')
