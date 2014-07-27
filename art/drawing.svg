@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-116.05638"
+     inkscape:cy="767.21111"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1676"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect5781"
+       width="2021.3153"
+       height="1387.9496"
+       x="-353.55341"
+       y="-173.96301" />
+    <g
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="text4136"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/actuator.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477">
+      <path
+         d="m 345.87747,655.6817 8.82569,59.28955 -15.7837,0 -0.76904,-10.65674 -5.52978,0 -0.91553,10.65674 -15.9668,0 7.83692,-59.28955 22.30224,0 m -8.1665,38.12256 c -0.78127,-6.71384 -1.56252,-15.0024 -2.34375,-24.86572 -1.56252,11.32816 -2.53908,19.61672 -2.92969,24.86572 l 5.27344,0"
+         style="fill:#ffffff;fill-opacity:1"
+         id="path4198" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-8"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(486.89842,-28.808863)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/brake-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 588.97496,571.45891 c -12.20201,-12.20202 -19.74911,-29.05893 -19.74911,-47.67857 0,-18.61965 7.5471,-35.47656 19.74911,-47.67857 m 95.35714,0 c 12.202,12.20201 19.74911,29.05892 19.74911,47.67857 0,18.61964 -7.54711,35.47655 -19.74911,47.67857"
+       id="path3847-9-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccsc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/brake-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <g
+       transform="translate(487.4035,-29.313933)"
+       style="font-size:35px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2d2d2d;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="text3868-8"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/brake-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 156.7823,522.84662 -2.41699,44.64111 -11.42578,0 -2.41699,-44.64111 16.25976,0 m -1.20849,47.42432 0,11.86523 -13.84278,0 0,-11.86523 13.84278,0"
+         style="font-size:75px;fill:#2d2d2d;fill-opacity:1"
+         id="path3873-7" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(38.066352,-116.63778)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/brake.png"
+       inkscape:export-xdpi="71.443161"
+       inkscape:export-ydpi="71.443161" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 140.14289,483.62998 c -12.20201,-12.20202 -19.74911,-29.05893 -19.74911,-47.67857 0,-18.61965 7.5471,-35.47656 19.74911,-47.67857 m 95.35714,0 c 12.20201,12.20201 19.74911,29.05892 19.74911,47.67857 0,18.61964 -7.5471,35.47655 -19.74911,47.67857"
+       id="path3847-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccsc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/brake.png"
+       inkscape:export-xdpi="71.443161"
+       inkscape:export-ydpi="71.443161" />
+    <g
+       style="font-size:35px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="text3868"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/brake.png"
+       inkscape:export-xdpi="71.443161"
+       inkscape:export-ydpi="71.443161"
+       transform="translate(38.571429,-117.14286)">
+      <path
+         d="m 156.7823,522.84662 -2.41699,44.64111 -11.42578,0 -2.41699,-44.64111 16.25976,0 m -1.20849,47.42432 0,11.86523 -13.84278,0 0,-11.86523 13.84278,0"
+         style="font-size:75px;fill:#ff0000;fill-opacity:1"
+         id="path3873"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 192.73029,224.50504 c -32.2216,0 -71.24999,-18.16339 -71.24999,-40.25479 0,-22.09139 39.02839,-39.74521 71.24999,-39.74521 0,54.85823 0,29.38089 0,80 z"
+       id="path2985-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/disconnected.png"
+       inkscape:export-xdpi="24"
+       inkscape:export-ydpi="24" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 242.85714,224.50504 c 32.2216,0 71.24999,-18.16339 71.24999,-40.25479 0,-22.09139 -39.02839,-39.74521 -71.24999,-39.74521 0,54.85823 0,29.38089 0,80 z"
+       id="path2985-8-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/disconnected.png"
+       inkscape:export-xdpi="24"
+       inkscape:export-ydpi="24" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 195.40824,202.00505 c 32.12744,0 32.75494,0 32.75494,0"
+       id="path3756-23-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/disconnected.png"
+       inkscape:export-xdpi="24"
+       inkscape:export-ydpi="24" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 194.92547,168.43362 c 32.37386,0 33.00617,0 33.00617,0"
+       id="path3756-4-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/disconnected.png"
+       inkscape:export-xdpi="24"
+       inkscape:export-ydpi="24" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 122.14285,182.36218 C 85.426563,237.25339 99.424063,118.82594 34.285713,203.79075"
+       id="path4065"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/disconnected.png"
+       inkscape:export-xdpi="24"
+       inkscape:export-ydpi="24" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 313.21428,181.83607 c 36.71629,54.89121 22.71879,-63.53624 87.85714,21.42857"
+       id="path4065-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/disconnected.png"
+       inkscape:export-xdpi="24"
+       inkscape:export-ydpi="24" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 197.90887,108.07647 c -32.2216,0 -71.24999,-18.163393 -71.24999,-40.254793 0,-22.091392 39.02839,-39.745212 71.24999,-39.745212 0,54.858232 0,29.380892 0,80.000005 z"
+       id="path2985-8-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/connected.png"
+       inkscape:export-xdpi="24.083435"
+       inkscape:export-ydpi="24.083435" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 205.89286,108.07647 c 32.2216,0 71.24999,-18.163393 71.24999,-40.254793 0,-22.091392 -39.02839,-39.745212 -71.24999,-39.745212 0,54.858232 0,29.380892 0,80.000005 z"
+       id="path2985-8-3-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/connected.png"
+       inkscape:export-xdpi="24.083435"
+       inkscape:export-ydpi="24.083435" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 127.32143,65.933607 C 90.605143,120.82482 104.60264,2.3973651 39.464293,87.362177"
+       id="path4065-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/connected.png"
+       inkscape:export-xdpi="24.083435"
+       inkscape:export-ydpi="24.083435" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 276.25,65.407497 c 36.71629,54.891213 22.71879,-63.5362419 87.85714,21.42857"
+       id="path4065-6-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/connected.png"
+       inkscape:export-xdpi="24.083435"
+       inkscape:export-ydpi="24.083435" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(185.36299,132.83507)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/actuator.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <g
+       transform="translate(-127.27923,146.47212)"
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2d2d2d;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="text4136-7"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/actuator-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 345.87747,655.6817 8.82569,59.28955 -15.7837,0 -0.76904,-10.65674 -5.52978,0 -0.91553,10.65674 -15.9668,0 7.83692,-59.28955 22.30224,0 m -8.1665,38.12256 c -0.78127,-6.71384 -1.56252,-15.0024 -2.34375,-24.86572 -1.56252,11.32816 -2.53908,19.61672 -2.92969,24.86572 l 5.27344,0"
+         style="fill:#2d2d2d;fill-opacity:1"
+         id="path4198-5" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-1"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(58.083764,279.30719)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/actuator-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#00ff00;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-4"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(355.7865,125.94752)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/poll.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       style="fill:#232323;fill-opacity:1;stroke:none"
+       d="m 507.46916,29.692027 c 0,-35.1978192 45.20259,-35.111382 71.76877,-35.111382 26.56618,0 71.76878,0.05864 71.76878,35.111382 0,35.052801 0,165.507423 0,165.507423 l -143.53755,0 c 0,0 0,-130.309593 0,-165.507423 z"
+       id="rect7237-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zzzccz"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-off.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none"
+       id="rect5554"
+       width="22.857143"
+       height="94.285713"
+       x="474.28571"
+       y="118.07647"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-off.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <rect
+       style="fill:#232323;fill-opacity:1;stroke:none"
+       id="rect5554-4"
+       width="22.857143"
+       height="94.285713"
+       x="661.25525"
+       y="118.07647"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-off.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       d="m 771.84154,30.011367 c 0,-35.1978169 45.20259,-35.1113769 71.76877,-35.1113769 26.56618,0 71.76878,0.0586 71.76878,35.1113769 0,35.052801 0,165.507423 0,165.507423 l -143.53755,0 c 0,0 0,-130.309593 0,-165.507423 z"
+       id="rect7237-4-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zzzccz"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-error.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect5554-2"
+       width="22.857143"
+       height="94.285713"
+       x="738.65808"
+       y="118.39581"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-error.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect5554-4-3"
+       width="22.857143"
+       height="94.285713"
+       x="925.62762"
+       y="118.39581"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-error.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 695.41297,-222.84578 c 0,-35.19782 45.20259,-35.11138 71.76877,-35.11138 26.56618,0 71.76878,0.0586 71.76878,35.11138 0,35.0528 0,165.50742 0,165.50742 l -143.53755,0 c 0,0 0,-130.30959 0,-165.50742 z"
+       id="rect7237-4-5-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="zzzccz"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-on.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect5554-2-6"
+       width="22.857143"
+       height="94.285713"
+       x="662.22949"
+       y="-134.46133"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-on.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect5554-4-3-3"
+       width="22.857143"
+       height="94.285713"
+       x="849.19904"
+       y="-134.46133"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/bot-on.png"
+       inkscape:export-xdpi="22.315947"
+       inkscape:export-ydpi="22.315947" />
+    <path
+       style="fill:none;stroke:#ffff00;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1"
+       d="m 115.15739,952.86218 0,94.44922 -64.649761,0 0,-94.44922 17.172371,0 2.18e-4,-18.18275 30.304577,0 0,18.18275 z"
+       id="rect5681"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/batt.png"
+       inkscape:export-xdpi="18.08288"
+       inkscape:export-ydpi="18.08288" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 90.962385,968.16917 -2.41699,44.64113 -11.42578,0 -2.41699,-44.64113 16.25976,0 m -1.20849,47.42433 0,11.8652 -13.84278,0 0,-11.8652 13.84278,0"
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="path3873-71"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/batt.png"
+       inkscape:export-xdpi="18.08288"
+       inkscape:export-ydpi="18.08288" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1"
+       d="m 231.61059,954.22895 0,94.44925 -64.64976,0 0,-94.44925 17.17237,0 2.2e-4,-18.18275 30.30458,0 0,18.18275 z"
+       id="rect5681-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/batt-off.png"
+       inkscape:export-xdpi="17.610191"
+       inkscape:export-ydpi="17.610191" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 207.41559,969.53594 -2.41699,44.64116 -11.42578,0 -2.41699,-44.64116 16.25976,0 m -1.20849,47.42436 0,11.8652 -13.84278,0 0,-11.8652 13.84278,0"
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2d2d2d;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="path3873-71-5"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/batt-off.png"
+       inkscape:export-xdpi="17.610191"
+       inkscape:export-ydpi="17.610191" />
+    <path
+       style="fill:#00ff00;fill-opacity:1;stroke:none"
+       d="m 474.06593,651.10693 c 19.99136,-11.54201 31.48618,12.8515 31.48618,12.8515 0,0 11.7847,-24.22615 31.48618,-12.8515 27.76412,16.02962 -6.84419,60.94299 -31.48618,71.32584 -26.06986,-7.86582 -57.98195,-55.59379 -31.48618,-71.32584 z"
+       id="rect5730-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/poll.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ff0000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-4-1"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(482.1352,127.37759)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/poll-timeout.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       d="m 600.41463,652.537 c 19.99136,-11.54201 31.48618,12.8515 31.48618,12.8515 0,0 11.7847,-24.22615 31.48618,-12.8515 27.76412,16.02962 -6.84419,60.94299 -31.48618,71.32584 -26.06986,-7.86582 -57.98195,-55.59379 -31.48618,-71.32584 z"
+       id="rect5730-5-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/poll-timeout.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-4-0"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(610.70662,126.6633)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/poll-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       style="fill:#2d2d2d;fill-opacity:1;stroke:none"
+       d="m 728.98605,651.82271 c 19.99136,-11.54201 31.48618,12.8515 31.48618,12.8515 0,0 11.7847,-24.22615 31.48618,-12.8515 27.76412,16.02962 -6.84419,60.94299 -31.48618,71.32584 -26.06986,-7.86582 -57.98195,-55.59379 -31.48618,-71.32584 z"
+       id="rect5730-5-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/poll-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 14.098064,298.18557 c 0,22.09139 -3.57182,42.03375 -16.1738599,42.03375 -32.2216101,0 -71.2500001,-18.16339 -71.2500001,-40.25479 0,-22.09139 39.02839,-39.74521 71.2500001,-39.74521 11.31128,0 16.1738599,15.87486 16.1738599,37.96625 z"
+       id="path2985-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-lock.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 19.046484,265.21932 c 75.58954,0 77.06591,0 77.06591,0"
+       id="path3756-27"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-lock.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 19.046484,335.21932 c 75.58954,0 77.06591,0 77.06591,0"
+       id="path3756-2-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-lock.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 25.623444,312.71932 c 69.20776,0 70.55949,0 70.55949,0"
+       id="path3756-23-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-lock.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 25.623444,287.71932 c 69.20776,0 70.55949,0 70.55949,0"
+       id="path3756-4-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-lock.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path5813"
+       sodipodi:cx="-28.53681"
+       sodipodi:cy="304.59677"
+       sodipodi:rx="17.425131"
+       sodipodi:ry="17.425131"
+       d="m -11.111679,304.59677 a 17.425131,17.425131 0 1 1 -34.850262,0 17.425131,17.425131 0 1 1 34.850262,0 z"
+       transform="matrix(1.3188406,0,0,1.3188406,13.139303,-102.16857)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-lock.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 281.4716,305.84601 c 0,22.09139 -3.57182,42.03375 -16.17386,42.03375 -32.22161,0 -71.25,-18.16339 -71.25,-40.25479 0,-22.09139 39.02839,-39.74521 71.25,-39.74521 11.31128,0 16.17386,15.87486 16.17386,37.96625 z"
+       id="path2985-0-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-off.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 286.42002,272.87976 c 75.58954,0 77.06591,0 77.06591,0"
+       id="path3756-27-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-off.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 286.42002,342.87976 c 75.58954,0 77.06591,0 77.06591,0"
+       id="path3756-2-0-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-off.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 292.99698,320.37976 c 69.20776,0 70.55949,0 70.55949,0"
+       id="path3756-23-4-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-off.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 292.99698,295.37976 c 69.20776,0 70.55949,0 70.55949,0"
+       id="path3756-4-1-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-off.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#2d2d2d;fill-opacity:1;stroke:none"
+       id="path5813-0"
+       sodipodi:cx="-28.53681"
+       sodipodi:cy="304.59677"
+       sodipodi:rx="17.425131"
+       sodipodi:ry="17.425131"
+       d="m -11.111679,304.59677 a 17.425131,17.425131 0 1 1 -34.850262,0 17.425131,17.425131 0 1 1 34.850262,0 z"
+       transform="matrix(1.3188406,0,0,1.3188406,280.51284,-94.508133)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights-off.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 11.760865,408.88157 c 0,22.09139 -3.5718201,42.03375 -16.1738601,42.03375 -32.2216099,0 -71.2499969,-18.16339 -71.2499969,-40.25479 0,-22.09139 39.028387,-39.74521 71.2499969,-39.74521 11.31128,0 16.1738601,15.87486 16.1738601,37.96625 z"
+       id="path2985-0-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 16.709285,375.91532 c 75.58954,0 77.06591,0 77.06591,0"
+       id="path3756-27-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 16.709285,445.91532 c 75.58954,0 77.06591,0 77.06591,0"
+       id="path3756-2-0-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 23.286245,423.41532 c 69.20776,0 70.55949,0 70.55949,0"
+       id="path3756-23-4-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 23.286245,398.41532 c 69.20776,0 70.55949,0 70.55949,0"
+       id="path3756-4-1-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#2d2d2d;fill-opacity:1;stroke:none"
+       id="path5813-6"
+       sodipodi:cx="-28.53681"
+       sodipodi:cy="304.59677"
+       sodipodi:rx="17.425131"
+       sodipodi:ry="17.425131"
+       d="m -11.111679,304.59677 a 17.425131,17.425131 0 1 1 -34.850262,0 17.425131,17.425131 0 1 1 34.850262,0 z"
+       transform="matrix(1.3188406,0,0,1.3188406,10.802105,8.5274267)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/lights.png"
+       inkscape:export-xdpi="24.240688"
+       inkscape:export-ydpi="24.240688" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-8"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(200.51527,-62.124371)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/laser.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ff0000;stroke:#ffffff;stroke-width:22.17391204999999843;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       id="path3847-3-8-2"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="matrix(0.4509804,0,0,0.4509804,282.87242,240.38643)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/laser.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#2d2d2d;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-8-5"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(349.99234,-67.622414)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/laser-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#2d2d2d;fill-opacity:1;stroke:#2d2d2d;stroke-width:22.17391205;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-8-2-9"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="matrix(0.4509804,0,0,0.4509804,432.34949,234.8884)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/laser-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2d2d2d;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       x="1134.2858"
+       y="366.64789"
+       id="text3915"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/title.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477"><tspan
+         sodipodi:role="line"
+         id="tspan3917"
+         x="1134.2858"
+         y="366.64789">BOT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2d2d2d;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       x="1030"
+       y="423.79074"
+       id="text3919"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/title.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477"><tspan
+         sodipodi:role="line"
+         id="tspan3921"
+         x="1030"
+         y="423.79074"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Bold;font-size:120px;fill:#2d2d2d;fill-opacity:1">glorious</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       x="636.5871"
+       y="295.70258"
+       id="text3915-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/title-on.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477"><tspan
+         sodipodi:role="line"
+         id="tspan3917-9"
+         x="636.5871"
+         y="295.70258">BOT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       x="532.30133"
+       y="352.84543"
+       id="text3919-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/title-on.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477"><tspan
+         sodipodi:role="line"
+         id="tspan3921-0"
+         x="532.30133"
+         y="352.84543"
+         style="font-size:120px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Bold">glorious</tspan></text>
+    <path
+       style="fill:#2d2d2d;fill-opacity:1;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -1.4927074,617.05654 c 0,-6.56429 0,-93.63791 0,-100 0,-7.20584 -90.5527936,39.7637 -90.5527936,50 0,12.2566 90.5527936,56.43764 90.5527936,50 z"
+       id="path3846"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/left-off.png"
+       inkscape:export-xdpi="9.8476839"
+       inkscape:export-ydpi="9.8476839" />
+    <path
+       style="fill:#2d2d2d;fill-opacity:1;stroke:#2d2d2d;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 33.295031,618.84624 c 0,-6.56429 0,-93.63791 0,-100 0,-7.20584 90.552789,39.7637 90.552789,50 0,12.2566 -90.552789,56.43764 -90.552789,50 z"
+       id="path3846-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/right-off.png"
+       inkscape:export-xdpi="9.6961327"
+       inkscape:export-ydpi="9.6961327" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -1.6795807,739.37997 c 0,-6.56429 0,-93.63791 0,-100 0,-7.20584 -90.5527943,39.7637 -90.5527943,50 0,12.2566 90.5527943,56.43764 90.5527943,50 z"
+       id="path3846-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/left-on.png"
+       inkscape:export-xdpi="9.8476839"
+       inkscape:export-ydpi="9.8476839" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 33.108155,741.16967 c 0,-6.56429 0,-93.63791 0,-100 0,-7.20584 90.552785,39.7637 90.552785,50 0,12.2566 -90.552785,56.43764 -90.552785,50 z"
+       id="path3846-0-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/right-on.png"
+       inkscape:export-xdpi="9.6934872"
+       inkscape:export-ydpi="9.6934872" />
+    <path
+       style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -3.1081522,857.23711 c 0,-6.56429 0,-93.63791 0,-100 0,-7.20584 -90.5527938,39.7637 -90.5527938,50 0,12.2566 90.5527938,56.43764 90.5527938,50 z"
+       id="path3846-47"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/left-standby.png"
+       inkscape:export-xdpi="9.6934872"
+       inkscape:export-ydpi="9.6934872" />
+    <path
+       style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 31.679583,859.02681 c 0,-6.56429 0,-93.63791 0,-100 0,-7.20584 90.552787,39.7637 90.552787,50 0,12.2566 -90.552787,56.43764 -90.552787,50 z"
+       id="path3846-0-29"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssss"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/right-standby.png"
+       inkscape:export-xdpi="9.6961327"
+       inkscape:export-ydpi="9.6961327" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 513.27541,1084.9217 233.28268,0"
+       id="path3070"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 510.48462,1064.765 732.34968,992.67667"
+       id="path3070-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 499.61415,1042.9766 688.34385,905.85641"
+       id="path3070-1-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 483.32984,1027.5501 620.44994,838.82037"
+       id="path3070-1-9-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 463.80683,1017.5165 535.89512,795.65143"
+       id="path3070-1-9-2-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 442.45611,1013.9711 -2e-5,-233.28266"
+       id="path3070-1-9-2-0-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 510.00489,1106.0377 221.8651,72.0884"
+       id="path3070-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#232323;stroke-width:15;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3955"
+       sodipodi:cx="436.25"
+       sodipodi:cy="1113.6122"
+       sodipodi:rx="61.964287"
+       sodipodi:ry="61.964287"
+       d="m 498.21429,1113.6122 a 61.964287,61.964287 0 1 1 -123.92858,0 61.964287,61.964287 0 1 1 123.92858,0 z"
+       transform="translate(639.61853,-521.23541)" />
+    <g
+       transform="translate(107.48649,398.11395)"
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#2d2d2d;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       id="text4136-7-3"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/actuator-off.png"
+       inkscape:export-xdpi="19.104477"
+       inkscape:export-ydpi="19.104477" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#232323;stroke:#232323;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       id="path3847-3-1-0"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(292.84948,530.94902)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-off.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1023.9399,1087.1659 233.2827,0"
+       id="path3070-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1021.1491,1067.0092 221.8651,-72.0883"
+       id="path3070-1-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 1010.2786,1045.2208 1199.0083,908.10064"
+       id="path3070-1-9-21"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 993.99434,1029.7943 1131.1144,841.0646"
+       id="path3070-1-9-2-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 974.47133,1019.7607 1046.5596,797.89566"
+       id="path3070-1-9-2-0-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 953.12061,1016.2153 -2e-5,-233.28263"
+       id="path3070-1-9-2-0-6-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1020.6694,1108.2819 221.8651,72.0884"
+       id="path3070-9-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-1-0-2"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(803.51398,533.19325)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <text
+       xml:space="preserve"
+       style="font-size:100px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Impact;-inkscape-font-specification:Impact Bold"
+       x="952.28528"
+       y="1122.5677"
+       id="text4038"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-6.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764"><tspan
+         sodipodi:role="line"
+         id="tspan4040"
+         x="952.28528"
+         y="1122.5677">6</tspan></text>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1197.6861,135.60226 233.2827,0"
+       id="path3070-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1194.8954,115.44556 221.865,-72.088399"
+       id="path3070-1-45"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1184.0249,93.657161 188.7297,-137.1202"
+       id="path3070-1-9-29"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 1167.7406,78.230661 1304.8607,-110.49914"
+       id="path3070-1-9-2-08"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1148.2176,68.197061 72.0883,-221.865101"
+       id="path3070-1-9-2-0-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1126.8668,64.651661 0,-233.282701"
+       id="path3070-1-9-2-0-6-26"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       style="fill:none;stroke:#232323;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1194.4156,156.71826 221.8651,72.0884"
+       id="path3070-9-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#232323;fill-opacity:1;stroke:#232323;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3847-3-1-0-5"
+       sodipodi:cx="150.00766"
+       sodipodi:cy="552.84174"
+       sodipodi:rx="51.51778"
+       sodipodi:ry="51.51778"
+       d="m 201.52544,552.84174 a 51.51778,51.51778 0 1 1 -103.03556,0 51.51778,51.51778 0 1 1 103.03556,0 z"
+       transform="translate(977.26021,-418.37044)"
+       inkscape:export-filename="/home/wira/wirarepo/bbi/botglorious/dragon/art/act-set-disengaged.png"
+       inkscape:export-xdpi="18.988764"
+       inkscape:export-ydpi="18.988764" />
+  </g>
+</svg>
