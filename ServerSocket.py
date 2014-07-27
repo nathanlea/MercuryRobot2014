@@ -5,6 +5,9 @@ import random
 import socket
 import binascii
 import struct
+from multiprocessing import Process
+from VideoCapture import *
+from PIL import *
 
 class MyTCPHandler(SocketServer.BaseRequestHandler):
     """
@@ -118,10 +121,35 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
                 self.request.sendall(self.packed_data)
                 self.rQue.queue.clear()
                 #self.request.send( self.responce )
+                
+def imageProcessing( ):
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind((socket.gethostname(),5000))
+    server_socket.listen(5)
+
+    print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
+
+    camera = Device()
+
+    image = camera.getImage()
+
+    print "Server Waiting for client on port 5000"
+
+    while 1:
+        client_socket, address = server_socket.accept()            
+        image = camera.getImage().convert("RGB")
+        image = image.resize((640,480))
+        #image.save("webcam.jpg")
+        data = image.tostring()
+        client_socket.sendall(data)
 
 if __name__ == "__main__":
     HOST, PORT = "localhost", 9999
-
+    
+    p = Process(target=imageProcessing)
+    p.start()
+    p.join()
+    
     # Create the server, binding to localhost on port 9999
     server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
 
