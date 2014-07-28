@@ -122,37 +122,50 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
                 self.rQue.queue.clear()
                 #self.request.send( self.responce )
                 
-def imageProcessing( ):
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((socket.gethostname(),5000))
-    server_socket.listen(5)
-
+class Camera(SocketServer.BaseRequestHandler):      
+    def handle( self ):
+        #server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        #self.request.bind("localhost")
+        #self.listen(5)       
+        
+        while 1:
+            try:
+                #client_socket, address = server_socket.accept()            
+                image = camera.getImage().convert("RGB")
+                image = image.resize((640,480))
+                #image.save("webcam.jpg")
+                self.data = image.tostring()
+                self.request.sendall(self.data)
+            except socket.error as e:
+                break
+                #print e.strerror 
+        
+def initServe( ):
+    server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
+    server.serve_forever()
+    
+if __name__ == "__main__":
+    global camera
+    global image
+    HOST, PORT = "localhost", 9999
+    CHOST, CPORT = "localhost", 5000
+    
     print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
-
+    print "Server Waiting for client on port 5000"
+    
     camera = Device()
 
     image = camera.getImage()
-
-    print "Server Waiting for client on port 5000"
-
-    while 1:
-        client_socket, address = server_socket.accept()            
-        image = camera.getImage().convert("RGB")
-        image = image.resize((640,480))
-        #image.save("webcam.jpg")
-        data = image.tostring()
-        client_socket.sendall(data)
-
-if __name__ == "__main__":
-    HOST, PORT = "localhost", 9999
     
-    p = Process(target=imageProcessing)
-    p.start()
-    p.join()
+    #server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
+    #server.serve_forever()
+    
+    server2 = SocketServer.TCPServer((CHOST, CPORT), Camera)
+    server2.serve_forever()
     
     # Create the server, binding to localhost on port 9999
-    server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
+    #server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
 
     # Activate the server; this will keep running until you
     # interrupt the program with Ctrl-C
-    server.serve_forever()
+    #server.serve_forever()

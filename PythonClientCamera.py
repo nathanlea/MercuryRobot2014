@@ -74,6 +74,6 @@ while 1:
   screen.blit(output,(0,0))
 
   #We set our clock to tick 60 times a second, which limits the frame rate to that amount:
-  clock.tick(60)
+  clock.tick(120)
   #We update the screen:
   pygame.display.flip()
