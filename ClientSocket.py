@@ -7,6 +7,7 @@ import time
 import struct
 import select
 import binascii
+import Image
 
 from pygame.locals import *
 
@@ -119,10 +120,14 @@ cq = Queue.Queue()
 
 pygame.init()
 
-screen = pygame.display.set_mode((500, 280))
+screen = pygame.display.set_mode((1280, 720))
 pygame.display.set_caption('Merc bot 2015');
 myfont = pygame.font.SysFont("sans", 12)
 bigfont = pygame.font.SysFont("Monospace", 25)
+
+clock = pygame.time.Clock()
+
+
 
 background = pygame.Surface(screen.get_size())
 background = background.convert()
@@ -184,7 +189,44 @@ def isValidPKT( recieved ):
         else:                
             return False
     else:
-        return False
+        return 
+
+def camera_thread():  
+    global camera_timer
+    global previousImage
+    global image
+    camera_timer = 0
+    previousImage = ""
+    image = ""
+    while 1:
+        if camera_timer < 1:        
+            #Create a socket connection for connecting to the server:
+            client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            client_socket.connect((str(ip),5000))
+            #Recieve data from the server:
+            data = client_socket.recv(1024000)
+            #Set the timer back to 30:
+            camera_timer = 30
+        else:
+            #Count down the timer:
+            camera_timer -= 1
+        try:
+            previousImage = image
+            #We use a try clause to the program will not abort if there is an error:
+            try:
+                #We turn the data we revieved into a 120x90 PIL image:
+                image = Image.fromstring("RGB",(640,480),data)
+                #We resize the image to 640x480:
+                image = image.resize((640,480))
+                #We turn the PIL image into a surface that PyGame can display:
+                image = pygame.image.frombuffer(image.tostring(),(640,480),"RGB")
+
+            except:
+                #If we failed to recieve a new image we display the last image we revieved:
+                image = previousImage
+        except:
+            i = 0
+        clock.tick(120)
 
 def poll_thread():
     global poll_timeout   
@@ -302,6 +344,7 @@ def update_screen():
     batt_max_cutoff = float(154 - batt_display_min) / batt_range * 300
     global sense_left_range
     global sense_right_range
+    global output
 
     color_off = pygame.Color(45, 45, 45)
     color_blue = pygame.Color(0, 0, 255)
@@ -312,88 +355,98 @@ def update_screen():
         background.fill((0, 0, 0))
         #text = myfont.render(str(int(left)) + " : " + str(int(right)), True, (65, 65, 65))
         #background.blit(text, (5,290))
+        try:
+            #Set the var output to our image:                
+            output = image
+            previousImage = output
+            #We use PyGame to blit the output image to the screen:
+            screen.blit(output,(320,0))            
+            #print "good"
+        except:
+            #print "bad image"
+            i = 0
 
-        if connect == 0:
-            text = myfont.render(str(ip) + ":" + str(port), True, (65, 65, 65))
-        else:
-            text = myfont.render(str(ip) + ":" + str(port), True, (255, 255, 255))
-    
+        # if connect == 0:
+            # text = myfont.render(str(ip) + ":" + str(port), True, (65, 65, 65))
+        # else:
+            # text = myfont.render(str(ip) + ":" + str(port), True, (255, 255, 255))
+        text = myfont.render("TESTING", True, (255, 255, 255))
         textpos = text.get_rect()
-        #background.blit(text, ((490-textpos.w), 10))
-        background.blit(text, (100, sensor_display_y+175))
+        screen.blit(text, ((1200-textpos.w), 10))
+        # background.blit(text, (100, sensor_display_y+175))
 
-        if poll_timeout == False:
-            text = myfont.render(str(poll_latency_millis) + " ms", True, (255, 255, 255))
-        else:
-            text = myfont.render("No data", True, (255, 255, 255))
+        # if poll_timeout == False:
+            # text = myfont.render(str(poll_latency_millis) + " ms", True, (255, 255, 255))
+        # else:
+            # text = myfont.render("No data", True, (255, 255, 255))
 
-        textpos = text.get_rect()
-        background.blit(text, ((490-textpos.w), stat_pos_y+30+textpos.h))
+        # textpos = text.get_rect()
+        # background.blit(text, ((490-textpos.w), stat_pos_y+30+textpos.h))
 
-        text = myfont.render(str(poll_interval) + " s int.", True, (255, 255, 255))
-        textpos = text.get_rect()
-        background.blit(text, ((490-textpos.w), stat_pos_y+30))
+        # text = myfont.render(str(poll_interval) + " s int.", True, (255, 255, 255))
+        # textpos = text.get_rect()
+        # background.blit(text, ((490-textpos.w), stat_pos_y+30))
 
-        screen.blit(background, (0,0))
+        # screen.blit(background, (0,0))
 
-        pos = img_title.get_rect()
-        pos.y = 275 - pos.h
-        pos.centerx = 49
-        if connected == 0:
-            screen.blit(img_title, pos)    
-        else:
-            screen.blit(img_title_on, pos)    
+        # pos = img_title.get_rect()
+        # pos.y = 275 - pos.h
+        # pos.centerx = 49
+        # if connected == 0:
+            # screen.blit(img_title, pos)    
+        # else:
+            # screen.blit(img_title_on, pos)    
 
-        pos = img_lights.get_rect()
-        pos.centerx = 98 / 2
-        pos.y = stat_pos_y
-        if aux == 1 or aux_lock == 1:
-            if aux_lock == 0:
-                screen.blit(img_lights, pos)
-            else:
-                screen.blit(img_lights_lock, pos)
-        else:
-            screen.blit(img_lights_off, pos)
+        # pos = img_lights.get_rect()
+        # pos.centerx = 98 / 2
+        # pos.y = stat_pos_y
+        # if aux == 1 or aux_lock == 1:
+            # if aux_lock == 0:
+                # screen.blit(img_lights, pos)
+            # else:
+                # screen.blit(img_lights_lock, pos)
+        # else:
+            # screen.blit(img_lights_off, pos)
 
-        pos = img_actuator.get_rect()
-        pos.x = 98 / 2 - 5 - pos.w
-        pos.y = stat_pos_y+35
-        if actuator == 1:
-            screen.blit(img_actuator, pos)
-        else:
-            screen.blit(img_actuator_off, pos)
+        # pos = img_actuator.get_rect()
+        # pos.x = 98 / 2 - 5 - pos.w
+        # pos.y = stat_pos_y+35
+        # if actuator == 1:
+            # screen.blit(img_actuator, pos)
+        # else:
+            # screen.blit(img_actuator_off, pos)
 
-        pos = img_laser.get_rect()
-        pos.x = 98 / 2 + 5
-        pos.y = stat_pos_y+35
-        if laser == 1:
-            screen.blit(img_laser, pos)
-        else:
-            screen.blit(img_laser_off, pos)
+        # pos = img_laser.get_rect()
+        # pos.x = 98 / 2 + 5
+        # pos.y = stat_pos_y+35
+        # if laser == 1:
+            # screen.blit(img_laser, pos)
+        # else:
+            # screen.blit(img_laser_off, pos)
 
-        pos = img_poll.get_rect()
-        pos.x = 412+img_brake.get_rect().w+10
-        pos.y = stat_pos_y
-        if poll == 1:
-            if poll_timeout == False:
-                screen.blit(img_poll, pos)
-            else:
-                screen.blit(img_poll_timeout, pos)
-        else:
-            screen.blit(img_poll_off, pos)
+        # pos = img_poll.get_rect()
+        # pos.x = 412+img_brake.get_rect().w+10
+        # pos.y = stat_pos_y
+        # if poll == 1:
+            # if poll_timeout == False:
+                # screen.blit(img_poll, pos)
+            # else:
+                # screen.blit(img_poll_timeout, pos)
+        # else:
+            # screen.blit(img_poll_off, pos)
 
-        pos = img_brake.get_rect()
-        pos.x = 412
-        pos.y = stat_pos_y
-        if brake == 1:
-            screen.blit(img_brake, pos)
-        else:
-            screen.blit(img_brake_off, pos)
+        # pos = img_brake.get_rect()
+        # pos.x = 412
+        # pos.y = stat_pos_y
+        # if brake == 1:
+            # screen.blit(img_brake, pos)
+        # else:
+            # screen.blit(img_brake_off, pos)
 
-        if connect == 1 and brake == 0:
-            curcolor = pygame.Color(185, 185, 185)
-        else:
-            curcolor = color_off
+        # if connect == 1 and brake == 0:
+        curcolor = pygame.Color(185, 185, 185)
+        # else:
+            # curcolor = color_off
 
         posL = img_left_off.get_rect()
         posL.x = 98-5-posL.w
@@ -436,138 +489,137 @@ def update_screen():
         pygame.draw.rect(screen, (0, 0, 255), (98, motorL_pos_y, 2, 5), 0)
         pygame.draw.rect(screen, (0, 0, 255), (98, motorR_pos_y, 2, 5), 0)
 
-        if rev_limit == 15:
-            curcolor = color_blue
-        else:
-            curcolor = color_off        
+        # if rev_limit == 15:
+        curcolor = color_blue
+        # else:
+            # curcolor = color_off        
 
         pygame.draw.rect(screen, curcolor, (400, motorL_pos_y, 2, 5), 0)
         pygame.draw.rect(screen, curcolor, (400, motorR_pos_y, 2, 5), 0)
 
-        if connect == 1:
-            curcolor = color_blue
-        else:
-            curcolor = color_off
+        # if connect == 1:
+            # curcolor = color_blue
+        # else:
+            # curcolor = color_off
 
-        pygame.draw.rect(screen, curcolor, (98, sensor_display_y+199, 2, 5), 0)
-        pygame.draw.rect(screen, curcolor, (400, sensor_display_y+199, 2, 5), 0)
+        # pygame.draw.rect(screen, curcolor, (98, sensor_display_y+199, 2, 5), 0)
+        # pygame.draw.rect(screen, curcolor, (400, sensor_display_y+199, 2, 5), 0)
 
     
-        #pygame.draw.lines(screen, (0, 0, 255), False, ((128, 200),(128, 265)), 2)
-        #pygame.draw.lines(screen, (0, 0, 255), False, ((371, 200),(371, 265)), 2)
-        #pygame.draw.lines(screen, (0, 0, 255), False, ((225, 103),(275, 103)), 2)
-        #pygame.draw.rect(screen, (45, 45, 45), (100, 304, 300, 5), 0)
-        pygame.draw.lines(screen, (0, 0, 255), False, ((128, sensor_display_y+95),(128, sensor_display_y+160)), 2)
-        pygame.draw.lines(screen, (0, 0, 255), False, ((371, sensor_display_y+95),(371, sensor_display_y+160)), 2)
-        pygame.draw.lines(screen, (0, 0, 255), False, ((225, sensor_display_y-2),(275, sensor_display_y-2)), 2)
-        pygame.draw.rect(screen, (45, 45, 45), (100, sensor_display_y+199, 300, 5), 0)
+        # #pygame.draw.lines(screen, (0, 0, 255), False, ((128, 200),(128, 265)), 2)
+        # #pygame.draw.lines(screen, (0, 0, 255), False, ((371, 200),(371, 265)), 2)
+        # #pygame.draw.lines(screen, (0, 0, 255), False, ((225, 103),(275, 103)), 2)
+        # #pygame.draw.rect(screen, (45, 45, 45), (100, 304, 300, 5), 0)
+        # pygame.draw.lines(screen, (0, 0, 255), False, ((128, sensor_display_y+95),(128, sensor_display_y+160)), 2)
+        # pygame.draw.lines(screen, (0, 0, 255), False, ((371, sensor_display_y+95),(371, sensor_display_y+160)), 2)
+        # pygame.draw.lines(screen, (0, 0, 255), False, ((225, sensor_display_y-2),(275, sensor_display_y-2)), 2)
+        # pygame.draw.rect(screen, (45, 45, 45), (100, sensor_display_y+199, 300, 5), 0)
 
-        img_bat_pos = img_batt.get_rect()
+        # img_bat_pos = img_batt.get_rect()
 
-        if connected == 1:
-            left_offset = 0
-            right_offset = 0
-            if sense_left > sense_left_range:
-                left_offset = 90;
-            else:
-                left_offset = (float(sense_left) / sense_left_range) * 90
+        # if connected == 1:
+            # left_offset = 0
+            # right_offset = 0
+            # if sense_left > sense_left_range:
+                # left_offset = 90;
+            # else:
+                # left_offset = (float(sense_left) / sense_left_range) * 90
 
-            if sense_right > sense_right_range:
-                right_offset = 90;
-            else:
-                right_offset = (float(sense_right) / sense_right_range) * 90
+            # if sense_right > sense_right_range:
+                # right_offset = 90;
+            # else:
+                # right_offset = (float(sense_right) / sense_right_range) * 90
 
-            leftX = 130 + left_offset
-            rightX = 370 - right_offset
-            sense_fwd_adj = sense_fwd
-            if sense_fwd_adj > 55:
-                sense_fwd_adj = 55
-            fwdY = sensor_display_y + float(55 - sense_fwd_adj) / 55 * 90
-            battV = sense_batt
-            battVolts = round(float(sense_batt) / 255 * 10, 1)
-            if sense_batt > batt_display_max:
-                battV = batt_display_max
-            elif sense_batt < batt_display_min:
-                battV = batt_display_min
-            battX = float(battV - batt_display_min) / batt_range * 300
-            screen.blit(img_bot_on, (225, sensor_display_y+95))
+            # leftX = 130 + left_offset
+            # rightX = 370 - right_offset
+            # sense_fwd_adj = sense_fwd
+            # if sense_fwd_adj > 55:
+                # sense_fwd_adj = 55
+            # fwdY = sensor_display_y + float(55 - sense_fwd_adj) / 55 * 90
+            # battV = sense_batt
+            # battVolts = round(float(sense_batt) / 255 * 10, 1)
+            # if sense_batt > batt_display_max:
+                # battV = batt_display_max
+            # elif sense_batt < batt_display_min:
+                # battV = batt_display_min
+            # battX = float(battV - batt_display_min) / batt_range * 300
+            # screen.blit(img_bot_on, (225, sensor_display_y+95))
 
-            if actuator == 0:
-                screen.blit(img_act_set_disengaged, (20, 140))
-            else:
-                if actuator_setting == 0:
-                    screen.blit(img_act_set_0, (20, 140))
-                elif actuator_setting == 1:
-                    screen.blit(img_act_set_1, (20, 140))
-                elif actuator_setting == 2:
-                    screen.blit(img_act_set_2, (20, 140))
-                elif actuator_setting == 3:
-                    screen.blit(img_act_set_3, (20, 140))
-                elif actuator_setting == 4:
-                    screen.blit(img_act_set_4, (20, 140))
-                elif actuator_setting == 5:
-                    screen.blit(img_act_set_5, (20, 140))
-                elif actuator_setting == 6:
-                    screen.blit(img_act_set_6, (20, 140))
+            # if actuator == 0:
+                # screen.blit(img_act_set_disengaged, (20, 140))
+            # else:
+                # if actuator_setting == 0:
+                    # screen.blit(img_act_set_0, (20, 140))
+                # elif actuator_setting == 1:
+                    # screen.blit(img_act_set_1, (20, 140))
+                # elif actuator_setting == 2:
+                    # screen.blit(img_act_set_2, (20, 140))
+                # elif actuator_setting == 3:
+                    # screen.blit(img_act_set_3, (20, 140))
+                # elif actuator_setting == 4:
+                    # screen.blit(img_act_set_4, (20, 140))
+                # elif actuator_setting == 5:
+                    # screen.blit(img_act_set_5, (20, 140))
+                # elif actuator_setting == 6:
+                    # screen.blit(img_act_set_6, (20, 140))
 
-            if poll_timeout == False and poll == 1:
-                pygame.draw.rect(screen, (0, 255, 0), (100, sensor_display_y+199, battX, 5), 0)
-                pygame.draw.rect(screen, (255, 0, 0), (100+batt_warning_cutoff, sensor_display_y+199, 2, 5), 0)
-                pygame.draw.rect(screen, (255, 180, 0), (100+batt_max_cutoff, sensor_display_y+199, 2, 5), 0)
-                if poll == 1 and poll_timeout == False:
-                    curcolor = color_green;
-                else:
-                    curcolor = color_off;
-                pygame.draw.lines(screen, curcolor, False, ((leftX, sensor_display_y+95),(leftX, sensor_display_y+160)), 2)
-                pygame.draw.lines(screen, curcolor, False, ((rightX, sensor_display_y+95),(rightX, sensor_display_y+160)), 2)
-                pygame.draw.lines(screen, curcolor, False, ((225, fwdY),(275, fwdY)), 2)
+            # if poll_timeout == False and poll == 1:
+                # pygame.draw.rect(screen, (0, 255, 0), (100, sensor_display_y+199, battX, 5), 0)
+                # pygame.draw.rect(screen, (255, 0, 0), (100+batt_warning_cutoff, sensor_display_y+199, 2, 5), 0)
+                # pygame.draw.rect(screen, (255, 180, 0), (100+batt_max_cutoff, sensor_display_y+199, 2, 5), 0)
+                # if poll == 1 and poll_timeout == False:
+                    # curcolor = color_green;
+                # else:
+                    # curcolor = color_off;
+                # pygame.draw.lines(screen, curcolor, False, ((leftX, sensor_display_y+95),(leftX, sensor_display_y+160)), 2)
+                # pygame.draw.lines(screen, curcolor, False, ((rightX, sensor_display_y+95),(rightX, sensor_display_y+160)), 2)
+                # pygame.draw.lines(screen, curcolor, False, ((225, fwdY),(275, fwdY)), 2)
                 
-                if sense_fwd < 4:
-                    fwd_dist = 0;
-                else:
-                    fwd_dist = round(5 + float(sense_fwd) * 5, 1)
+                # if sense_fwd < 4:
+                    # fwd_dist = 0;
+                # else:
+                    # fwd_dist = round(5 + float(sense_fwd) * 5, 1)
 
-                if fwd_dist >= 24:
-                    text = myfont.render(str(fwd_dist) + " cm", True, (255, 255, 255))
-                else:
-                    text = myfont.render("<15 cm", True, (255, 255, 255))
-                textpos = text.get_rect()
-                textpos.centerx = background.get_rect().centerx
-                textpos.y = sensor_display_y - 5 - textpos.h
-                screen.blit(text, textpos)
-                text = myfont.render(str(battVolts) + " V", True, (255, 255, 255))
-                textpos = text.get_rect()
-                screen.blit(text, (400-textpos.w, sensor_display_y+175))
-                if sense_batt < 141:
-                    screen.blit(img_batt, (430-img_bat_pos.w, sensor_display_y+180))
-                else:
-                    screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
-                if sense_aux0 < 128:
-                    #pygame.draw.lines(screen, (255, 0, 0), False, ((128, 200),(128, 265)), 2)
-                    pygame.draw.lines(screen, (255, 0, 0), False, ((128, sensor_display_y+95),(128, sensor_display_y+160)), 2)
-                if sense_aux1 < 128:
-                    #pygame.draw.lines(screen, (255, 0, 0), False, ((371, 200),(371, 265)), 2)
-                    pygame.draw.lines(screen, (255, 0, 0), False, ((371, sensor_display_y+95),(371, sensor_display_y+160)), 2)
-                if sense_gpio == 0:
-                    pygame.draw.lines(screen, (255, 0, 0), False, ((225, sensor_display_y-2),(275, sensor_display_y-2)), 2)
+                # if fwd_dist >= 24:
+                    # text = myfont.render(str(fwd_dist) + " cm", True, (255, 255, 255))
+                # else:
+                    # text = myfont.render("<15 cm", True, (255, 255, 255))
+                # textpos = text.get_rect()
+                # textpos.centerx = background.get_rect().centerx
+                # textpos.y = sensor_display_y - 5 - textpos.h
+                # screen.blit(text, textpos)
+                # text = myfont.render(str(battVolts) + " V", True, (255, 255, 255))
+                # textpos = text.get_rect()
+                # screen.blit(text, (400-textpos.w, sensor_display_y+175))
+                # if sense_batt < 141:
+                    # screen.blit(img_batt, (430-img_bat_pos.w, sensor_display_y+180))
+                # else:
+                    # screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
+                # if sense_aux0 < 128:
+                    # #pygame.draw.lines(screen, (255, 0, 0), False, ((128, 200),(128, 265)), 2)
+                    # pygame.draw.lines(screen, (255, 0, 0), False, ((128, sensor_display_y+95),(128, sensor_display_y+160)), 2)
+                # if sense_aux1 < 128:
+                    # #pygame.draw.lines(screen, (255, 0, 0), False, ((371, 200),(371, 265)), 2)
+                    # pygame.draw.lines(screen, (255, 0, 0), False, ((371, sensor_display_y+95),(371, sensor_display_y+160)), 2)
+                # if sense_gpio == 0:
+                    # pygame.draw.lines(screen, (255, 0, 0), False, ((225, sensor_display_y-2),(275, sensor_display_y-2)), 2)
 
-            else:
-                screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
+            # else:
+                # screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
 
-        elif connect == 1:
-            screen.blit(img_bot_connecting, (225, sensor_display_y+95))
-            screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
+        # elif connect == 1:
+            # screen.blit(img_bot_connecting, (225, sensor_display_y+95))
+            # screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
 
-        else:
-            screen.blit(img_bot_off, (225, sensor_display_y+95))
-            screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
-            screen.blit(img_act_set_off, (20, 140))
+        # else:
+            # screen.blit(img_bot_off, (225, sensor_display_y+95))
+            # screen.blit(img_batt_off, (430-img_bat_pos.w, sensor_display_y+180))
+            # screen.blit(img_act_set_off, (20, 140))
 
         if left_dir == 1:
             pygame.draw.rect(screen, (0, 255, 0), (100, motorL_pos_y, float(left) / 15 * 300, 5), 0)
         if left_dir == 2:
-            pygame.draw.rect(screen, (255, 0, 0), (100, motorL_pos_y, float(left) / 15 * 300, 5), 0)
-    
+            pygame.draw.rect(screen, (255, 0, 0), (100, motorL_pos_y, float(left) / 15 * 300, 5), 0)    
         if right_dir == 1:
             pygame.draw.rect(screen, (0, 255, 0), (100, motorR_pos_y, float(right) / 15 * 300, 5), 0)
         if right_dir == 2:
@@ -576,12 +628,12 @@ def update_screen():
         for i in range(0, 14):
             pygame.draw.rect(screen, (0, 0, 0), (120+20*i, motorL_pos_y, 2, 12), 0)
 
-        if first_connect == 0:
-            text = bigfont.render("WIGGLE AXES BEFORE CONNECTING", 1, (255, 255, 255))
-            textpos = text.get_rect()
-            textpos.centerx = background.get_rect().centerx
-            textpos.centery = 150
-            screen.blit(text, textpos)
+        # if first_connect == 0:
+            # text = bigfont.render("WIGGLE AXES BEFORE CONNECTING", 1, (255, 255, 255))
+            # textpos = text.get_rect()
+            # textpos.centerx = background.get_rect().centerx
+            # textpos.centery = 150
+            # screen.blit(text, textpos)
     
         pygame.display.flip()
         time.sleep(refresh_rate)
@@ -677,7 +729,8 @@ def calc_motor_vals():
 
     old_left_packed = left_packed
     old_right_packed = right_packed
-        
+
+threading.Thread(target=camera_thread).start()    
 threading.Thread(target=update_screen).start()
 set_act = False
 motion = 0

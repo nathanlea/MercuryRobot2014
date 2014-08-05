@@ -29,3 +29,5 @@ while 1:
     data = image.tostring()
 
     client_socket.sendall(data)
+    
+    print "HOST"

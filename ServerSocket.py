@@ -1,5 +1,6 @@
 import sys
 import SocketServer
+import threading
 import Queue
 import random
 import socket
@@ -122,6 +123,18 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
                 self.rQue.queue.clear()
                 #self.request.send( self.responce )
                 
+def camera_thread( ):
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind((socket.gethostname(),5000))
+    server_socket.listen(5)
+    while 1:
+        client_socket, address = server_socket.accept()        
+        image = camera.getImage().convert("RGB")
+        image = image.resize((640,480))
+        #image.save("webcam.jpg")
+        data = image.tostring()
+        client_socket.sendall(data)    
+                
 class Camera(SocketServer.BaseRequestHandler):      
     def handle( self ):
         #server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -153,15 +166,22 @@ if __name__ == "__main__":
     print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
     print "Server Waiting for client on port 5000"
     
-    camera = Device()
+    #camera = Device()
 
+    #image = camera.getImage()
+    
+    camera = Device()
     image = camera.getImage()
     
-    #server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
-    #server.serve_forever()
+    threading.Thread(target=camera_thread).start()    
     
-    server2 = SocketServer.TCPServer((CHOST, CPORT), Camera)
-    server2.serve_forever()
+    
+    server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
+    server.serve_forever()
+    
+    # server2 = SocketServer.TCPServer((CHOST, CPORT), Camera)
+    # server2.serve_forever    
+    
     
     # Create the server, binding to localhost on port 9999
     #server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
