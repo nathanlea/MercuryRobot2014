@@ -7,11 +7,11 @@ import time
 import struct
 import select
 import binascii
-import Image
+#import Image
 
 from pygame.locals import *
 
-HOST, PORT = "localhost", 9999
+HOST, PORT = "192.168.137.233", 9999
 data = '\x04\x0F\x0F\x00\x00\xEF'
 #data = 'aabbccdd'
 
@@ -191,42 +191,42 @@ def isValidPKT( recieved ):
     else:
         return 
 
-def camera_thread():  
-    global camera_timer
-    global previousImage
-    global image
-    camera_timer = 0
-    previousImage = ""
-    image = ""
-    while 1:
-        if camera_timer < 1:        
-            #Create a socket connection for connecting to the server:
-            client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            client_socket.connect((str(ip),5000))
-            #Recieve data from the server:
-            data = client_socket.recv(1024000)
-            #Set the timer back to 30:
-            camera_timer = 30
-        else:
-            #Count down the timer:
-            camera_timer -= 1
-        try:
-            previousImage = image
-            #We use a try clause to the program will not abort if there is an error:
-            try:
-                #We turn the data we revieved into a 120x90 PIL image:
-                image = Image.fromstring("RGB",(640,480),data)
-                #We resize the image to 640x480:
-                image = image.resize((640,480))
-                #We turn the PIL image into a surface that PyGame can display:
-                image = pygame.image.frombuffer(image.tostring(),(640,480),"RGB")
+# def camera_thread():  
+    # global camera_timer
+    # global previousImage
+    # global image
+    # camera_timer = 0
+    # previousImage = ""
+    # image = ""
+    # while 1:
+        # if camera_timer < 1:        
+            # #Create a socket connection for connecting to the server:
+            # client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            # client_socket.connect((str(ip),5000))
+            # #Recieve data from the server:
+            # data = client_socket.recv(1024000)
+            # #Set the timer back to 30:
+            # camera_timer = 30
+        # else:
+            # #Count down the timer:
+            # camera_timer -= 1
+        # try:
+            # previousImage = image
+            # #We use a try clause to the program will not abort if there is an error:
+            # try:
+                # #We turn the data we revieved into a 120x90 PIL image:
+                # image = Image.fromstring("RGB",(640,480),data)
+                # #We resize the image to 640x480:
+                # image = image.resize((640,480))
+                # #We turn the PIL image into a surface that PyGame can display:
+                # image = pygame.image.frombuffer(image.tostring(),(640,480),"RGB")
 
-            except:
-                #If we failed to recieve a new image we display the last image we revieved:
-                image = previousImage
-        except:
-            i = 0
-        clock.tick(120)
+            # except:
+                # #If we failed to recieve a new image we display the last image we revieved:
+                # image = previousImage
+        # except:
+            # i = 0
+        # clock.tick(120)
 
 def poll_thread():
     global poll_timeout   
@@ -730,7 +730,7 @@ def calc_motor_vals():
     old_left_packed = left_packed
     old_right_packed = right_packed
 
-threading.Thread(target=camera_thread).start()    
+#threading.Thread(target=camera_thread).start()    
 threading.Thread(target=update_screen).start()
 set_act = False
 motion = 0
