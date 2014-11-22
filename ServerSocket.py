@@ -14,9 +14,10 @@ import random
 import socket
 import binascii
 import struct
-from multiprocessing import Process
-from VideoCapture import *
-from PIL import *
+import Adafruit_BBIO.GPIO as GPIO
+#from multiprocessing import Process
+#from VideoCapture import *
+#from PIL import *
 
 class MyTCPHandler(SocketServer.BaseRequestHandler):
     """
@@ -113,80 +114,93 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
             
 
     def handle(self):
-        while 1:
-            self.data = self.request.recv(1024)
-            self.data = self.data.strip()
-            byteArr = bytearray(self.data)
-            
-            for x in range(0, len(self.data)):
-                self.que.put(byteArr[x])
-            
-            #print str(self.client_address[0]) + " wrote: "
-            #print self.data
-            #self.request.send(self.data.upper())
-            if self.isValidPKT( ):
-                self.randrequest( )
-                print >>sys.stderr, 'sending "%s"' % binascii.hexlify(self.packed_data)
-                self.request.sendall(self.packed_data)
-                self.rQue.queue.clear()
-                #self.request.send( self.responce )
+        try: 
+            GPIO.output("P8_10", GPIO.HIGH)
+            GPIO.output("P8_11", GPIO.LOW)
+            print "Connected"
+            while 1:
+                self.data = self.request.recv(1024)
+                self.data = self.data.strip()
+                byteArr = bytearray(self.data)
                 
-def camera_thread( ):
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((socket.gethostname(),5000))
-    server_socket.listen(5)
-    while 1:
-        client_socket, address = server_socket.accept()        
-        image = camera.getImage().convert("RGB")
-        image = image.resize((640,480))
-        #image.save("webcam.jpg")
-        data = image.tostring()
-        client_socket.sendall(data)    
+                for x in range(0, len(self.data)):
+                    self.que.put(byteArr[x])
                 
-class Camera(SocketServer.BaseRequestHandler):      
-    def handle( self ):
+                #print str(self.client_address[0]) + " wrote: "
+                #print self.data
+                #self.request.send(self.data.upper())
+                if self.isValidPKT( ):
+                    self.randrequest( )
+                    #print >>sys.stderr, 'sending "%s"' % binascii.hexlify(self.packed_data)
+                    self.request.sendall(self.packed_data)
+                    self.rQue.queue.clear()
+                    #self.request.send( self.responce )
+        except:
+            GPIO.output("P8_11", GPIO.HIGH)
+            GPIO.output("P8_10", GPIO.LOW)
+            print "Disconnected"
+                
+#def camera_thread( ):
+#    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#    server_socket.bind((socket.gethostname(),5000))
+#    server_socket.listen(5)
+#    while 1:
+#        client_socket, address = server_socket.accept()        
+#        image = camera.getImage().convert("RGB")
+#        image = image.resize((640,480))
+#        #image.save("webcam.jpg")
+#        data = image.tostring()
+#        client_socket.sendall(data)    
+                
+#class Camera(SocketServer.BaseRequestHandler):      
+#    def handle( self ):
         #server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         #self.request.bind("localhost")
         #self.listen(5)       
         
-        while 1:
-            try:
-                #client_socket, address = server_socket.accept()            
-                image = camera.getImage().convert("RGB")
-                image = image.resize((640,480))
-                #image.save("webcam.jpg")
-                self.data = image.tostring()
-                self.request.sendall(self.data)
-            except socket.error as e:
-                break
-                #print e.strerror 
+#        while 1:
+#            try:
+#                #client_socket, address = server_socket.accept()            
+#                image = camera.getImage().convert("RGB")
+#                image = image.resize((640,480))
+#                #image.save("webcam.jpg")
+#                self.data = image.tostring()
+#                self.request.sendall(self.data)
+#            except socket.error as e:
+#                break
+#                #print e.strerror 
         
 def initServe( ):
     server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
     server.serve_forever()
     
 if __name__ == "__main__":
-    global camera
-    global image
-    HOST, PORT = "localhost", 9999
-    CHOST, CPORT = "localhost", 5000
+   # global camera
+#    global image
+    try:
+        HOST, PORT = "192.168.137.233", 9999
+    #    CHOST, CPORT = "localhost", 5000
+        
+        print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
+        print "Server Waiting for client on port 9999"
+        GPIO.setup("P8_10",  GPIO.OUT)
+        GPIO.setup("P8_11",  GPIO.OUT)
+        #camera = Device()
     
-    print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
-    print "Server Waiting for client on port 5000"
-    
-    #camera = Device()
-
-    #image = camera.getImage()
-    
-    camera = Device()
-    image = camera.getImage()
-    
-    threading.Thread(target=camera_thread).start()    
-    
-    
-    server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
-    server.serve_forever()
-    
+        #image = camera.getImage()
+        
+        #camera = Device()
+        #image = camera.getImage()
+        
+        #threading.Thread(target=camera_thread).start()    
+        
+        GPIO.output("P8_11",  GPIO.HIGH)
+        server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
+        server.serve_forever()
+    except KeyboardInterrupt:
+        GPIO.output("P8_10", GPIO.LOW)
+        GPIO.output("P8_11", GPIO.LOW)
+        GPIO.cleanup()
     # server2 = SocketServer.TCPServer((CHOST, CPORT), Camera)
     # server2.serve_forever    
     
