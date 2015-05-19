@@ -11,7 +11,7 @@ import binascii
 
 from pygame.locals import *
 
-HOST, PORT = "192.168.137.233", 9999
+HOST, PORT = "192.168.7.2", 9999
 data = '\x04\x0F\x0F\x00\x00\xEF'
 #data = 'aabbccdd'
 

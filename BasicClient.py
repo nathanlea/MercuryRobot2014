@@ -11,7 +11,7 @@ import binascii
 #ip = sys.argv[1]
 #port = sys.argv[2]
 
-HOST, PORT = "192.168.137.233", 9999
+HOST, PORT = "192.168.182.31", 9999
 data = '\x04\x0F\x0F\x00\x00\xEF'
 #data = 'aabbccdd'
 
@@ -32,7 +32,7 @@ print ("Port:             " + str(PORT))
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 poll_timeout = True
-poll_interval_ms = 50
+poll_interval_ms = 50 #50
 poll_interval = float(poll_interval_ms) / 1000
 poll_thread_exists = False
 poll_latency_millis = 0
@@ -111,31 +111,35 @@ def poll_thread():
     
     while connect == 1:
         #print "connect"
-        if poll == 1:
-            #print ""
-            poll_time = current_milli_time()
-            ready = select.select([s], [], [], 1)
-            if ready[0]:
-                #print "data"
-                unpacker = struct.Struct('1s 1s 1s 1s 1s 1s 1s 1s')
-                data = s.recv( unpacker.size )
-                unpacked_data = unpacker.unpack(data)
-                #print >>sys.stderr, 'received "%s"' % binascii.hexlify(data)
-                if len(data) == 8 and isValidPKT( unpacked_data ):
-                    sense_aux0   = ord(data[1]) - 48 
-                    sense_aux1   = ord(data[2]) - 48
-                    sense_fwd    = ord(data[3]) - 48
-                    sense_left   = ord(data[4]) - 48
-                    sense_right  = ord(data[5]) - 48
-                    sense_batt   = ord(data[6]) - 48
-                    poll_timeout = False;
+        try: 
+            if poll == 1:
+                print "poll"
+                poll_time = current_milli_time()
+                ready = select.select([s], [], [], 1)
+                if ready[0]:
+                    #print "data"
+                    unpacker = struct.Struct('1s 1s 1s 1s 1s 1s 1s 1s')
+                    data = s.recv( unpacker.size )
+                    unpacked_data = unpacker.unpack(data)
+                    #print >>sys.stderr, 'received "%s"' % binascii.hexlify(data)
+                    if len(data) == 8 and isValidPKT( unpacked_data ):
+                        sense_aux0   = ord(data[1]) - 48 
+                        sense_aux1   = ord(data[2]) - 48
+                        sense_fwd    = ord(data[3]) - 48
+                        sense_left   = ord(data[4]) - 48
+                        sense_right  = ord(data[5]) - 48
+                        sense_batt   = ord(data[6]) - 48
+                        poll_timeout = False;
+                    else:
+                        poll_timeout = True
                 else:
                     poll_timeout = True
-            else:
-                poll_timeout = True
-            poll_latency_millis = current_milli_time()
+                poll_latency_millis = current_milli_time()
 
-        time.sleep(poll_interval)
+            time.sleep(poll_interval)
+        except:
+            e = sus.exc_info()[0]
+            print e.strerror
         
     poll_timeout = True
     poll_thread_exists = False
@@ -175,16 +179,23 @@ def client_thread():
                 cq.put('\xEF')
             except socket.error as e:
                 print e.strerror
+                print "Error in socket: restarting sending"
+                #print "ERROR HELP"
+                #connect = 0
+                #connected = 0
+                cq.queue.clear()
+            except: 
+                e = sus.exc_info()[0]
+                print e.strerror
                 connect = 0
                 connected = 0
-                cq.queue.clear()
 
             if disconnect == 1:
                 dissconnect = 0
                 connect = 0
                 connected = 0
 
-            time.sleep(0.5)
+            time.sleep(poll_interval_ms) #.5
 
         cq.queue.clear()        
         s.close()
@@ -195,6 +206,7 @@ def client_thread():
         connect = 0
         connected = 0;
         cq.queue.clear()
+    
 
 #threading.Thread(target=update_screen).start()
 set_act = False
