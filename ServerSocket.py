@@ -172,17 +172,18 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
         
 def initServe( ):
     server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
+    print "Server Started"
     server.serve_forever()
     
 if __name__ == "__main__":
    # global camera
 #    global image
     try:
-        HOST, PORT = "192.168.137.233", 9999
+        HOST, PORT = "192.168.182.31", 9999
     #    CHOST, CPORT = "localhost", 5000
         
-        print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
-        print "Server Waiting for client on port 9999"
+        # print "Your IP address is: ", socket.gethostbyname(socket.gethostname())
+        # print "Server Waiting for client on port 9999"
         GPIO.setup("P8_10",  GPIO.OUT)
         GPIO.setup("P8_11",  GPIO.OUT)
         #camera = Device()
@@ -196,7 +197,11 @@ if __name__ == "__main__":
         
         GPIO.output("P8_11",  GPIO.HIGH)
         server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
-        server.serve_forever()
+        print "Server Live"
+	#	server.serve_forever()
+	print "Your IP address is: ", HOST
+        print "Server Waiting for client on port 9999"
+	server.serve_forever()
     except KeyboardInterrupt:
         GPIO.output("P8_10", GPIO.LOW)
         GPIO.output("P8_11", GPIO.LOW)
